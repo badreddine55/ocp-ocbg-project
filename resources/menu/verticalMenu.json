@@ -1,0 +1,53 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard",
+      "submenu": [
+        {
+          "url": "/",
+          "name": "Analytics",
+          "slug": "dashboard-analytics"
+        }
+      ]
+    },
+    
+    {
+      "url": "/table/all",
+      "icon": "menu-icon tf-icons bx bx-table",
+      "name": "tableau",
+      "slug": "tableau-all",
+      "submenu": [
+        {
+          "url": "/table/all",
+          "name": "tout",
+          "slug": "pages-misc-error"
+        },
+        {
+          "url": "table/paiement",
+          "name": "paiement",
+          "slug": "pages-misc-error"
+        },
+        {
+          "url": "/table/non_paiement",
+          "name": "non paiement",
+          "slug": "pages-misc-error"
+        }
+      ]
+    },
+    {
+      "name": "créer",
+      "icon": "menu-icon tf-icons bx bx-list-plus",
+      "slug": "créer",
+      "submenu": [
+        {
+          "url": "créer/nouvelle",
+          "name": "créer",
+          "slug": "créer"
+        }
+      ]
+    }
+  ]
+}
