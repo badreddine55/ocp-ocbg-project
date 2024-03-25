@@ -36,30 +36,23 @@
 
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
     <!-- Search -->
-
     <div class="navbar-nav align-items-center">
         <form class="nav-item d-flex align-items-center" action="{{ route('search') }}" method="GET">
             <label for="search-input" class="visually-hidden">Search</label>
             <i class="bx bx-search fs-4 lh-0"></i>
-            <input id="search-input " type="text" name="query"
-                class="form-control border-0 shadow-none ps-1 ps-sm-2" placeholder="Recherche..." style="width: 750px"
-                aria-label="Search...">
-
-            <button type="submit" class="btn btn-success ">Recherche</button>
+            <input id="search-input" type="text" name="query" class="form-control border-0 shadow-none ps-1 ps-sm-4" placeholder="Recherche..." style="width: 700px" aria-label="Search...">
+            <button type="submit" class="btn btn-success ms-2">Recherche</button>
         </form>
     </div>
-    
-    {{-- style="margin-left: 20px" --}}
     <!-- /Search -->
     <ul class="navbar-nav flex-row align-items-center ms-auto">
-        <!-- Place this tag where you want the button to render. -->
         <li class="nav-item lh-1 me-3">
-
-        <a href="{{ url('/créer/nouvelle') }}" class="btn btn-success">Creer</a>
+            <a href="{{ url('/créer/nouvelle') }}" class="btn btn-success">Creer</a>
         </li>
-
     </ul>
 </div>
+
+
 
 @if (!isset($navbarDetached))
     </div>

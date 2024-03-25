@@ -20,11 +20,11 @@
     </style>
 
     <h4 class="py-3 mb-4">
-        <span class="text-muted fw-light">Tableau /</span> Tout
+        <span class="text-muted fw-light">Tableau /</span> Halteroptrit
     </h4>
 
     <div class="card">
-        <h5 class="card-header">Tableau tout OCBG</h5>
+        <h5 class="card-header">Tableau Halteroptrit OCBG</h5>
         <div class="table-responsive">
             <div class="row mb-3">
 

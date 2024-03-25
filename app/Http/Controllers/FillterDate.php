@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ops; // Replace YourModelName with the actual name of your model
+use App\Models\ocbg; 
 use Illuminate\Http\Request;
 
 class FillterDate extends Controller
 {
-    public function filterOps(Request $request)
+    public function filterOCBG(Request $request)
     {
         $filterYear = $request->input('filterYear');
 
-        // Assuming YourModelName is the model representing your operations
-        // Filter ops by the year
-        $ops = ops::whereYear('created_at', $filterYear)->get();
+        // Perform the query to filter ocbg records by year
+        $ocbg = ocbg::whereYear('Date_regèlement', $filterYear)->get();
     
-        return view('content.tables.table-all', ['ops' => $ops]);
+        // Pass the filtered ocbg records to the view
+        return view('content.tables.table-all', ['ocbg' => $ocbg]);
     }
 }

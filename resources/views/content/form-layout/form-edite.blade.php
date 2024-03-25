@@ -3,6 +3,11 @@
 @section('title', 'Edit Op')
 
 @section('content')
+@if (isset($error))
+    <div class="alert alert-danger alert-dismissible">
+        <h5>{{ $error }}</h5>
+    </div>
+@endif
     <h4 class="py-3 mb-4"><span class="text-muted fw-light">Edit/</span>op</h4>
 
     <!-- Basic Layout & Basic with Icons -->
@@ -11,75 +16,70 @@
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">Edit op</h5>
+                    <h5 class="mb-0">Edit OCBG</h5>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{ route('update-op', $op->id) }}"  enctype="multipart/form-data">
+                    <form method="post" action="{{ route('update-ocbg', $ocbg->id) }}"  enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Numero Op</label>
+                            <label class="col-sm-2 col-form-label" for="numero">Numéro Op</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-merge">
-                                    <input type="text" class="form-control" id="basic-icon-default-fullname"
-                                        name="numero" value="{{ $op->numero }}" aria-label="OP-001"
-                                        aria-describedby="basic-icon-default-fullname2" />
+                                <input type="text" class="form-control" id="numero_OP" name="numero_OP" value="{{ $ocbg->numero_OP }}" aria-label="OP-001" aria-describedby="basic-icon-default-fullname2" />
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Libelle</label>
+                            <label class="col-sm-2 col-form-label" for="section">section</label>
                             <div class="col-sm-10">
-                                <div class="input-group input-group-merge">
-                                    <input type="text" id="basic-icon-default-company" class="form-control"
-                                        name="libelle" value="{{ $op->libelle }}" aria-label="libelle du op."
-                                        aria-describedby="basic-icon-default-company2" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">elaboration</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" id="exampleFormControlSelect1" name="type"
-                                    aria-label="Default select example">
-                                    <option value="{{ $op->elaboration }}">{{ $op->elaboration }}</option>
-                                    <option value="SADV(Location)">SADV(Location)</option>
-                                    <option value="SADV(ONEE-EE)">SADV(ONEE-EE)</option>
-                                    <option value="SADV(GC)">SADV(GC)</option>
+                                <select class="form-select" id="section" name="section">
+                                <option value="{{ $ocbg->section }}">{{ $ocbg->section }}</option>
+                                    <option value="Athlétisme">Athlétisme</option>
+                                    <option value="karaté">karaté</option>
+                                    <option value="Gymnastique">Gymnastique</option>
+                                    <option value="Natation">Natation</option>
+                                    <option value="Halteroptrit">Halteroptrit</option>
+                                    <option value="Cyclisme">Cyclisme</option>
+                                    <option value="Petanque">Petanque</option>
+                                    <option value="Tennis">Tennis</option>
+                                    <option value="Tir au vol">Tir au vol</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="numero">Date Regèlement</label>
+                            <div class="col-sm-10">
+                                <div class="input-group input-group-merge">
+                                <input type="date" class="form-control" id="Date_regèlement"   value="{{ $ocbg->Date_regèlement }}" name="Date_regèlement" placeholder="Enter Date Reglement" />
 
-                        <div class="row mb-3">
-                            <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">Type</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" id="exampleFormControlSelect1" name="type"
-                                    aria-label="Default select example">
-                                    <option value="Animation">Animation</option>
-                                    <option value="Affaire generaux">Affaire generaux</option>
-                                    <option value="Economat">Economat</option>
-                                    <option value="Divers">Divers</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-icon-default-phone">Montant</label>
-                            <div class="col-sm-10">
-                                <div class="input-group input-group-merge">
-                                    <input type="text" id="basic-icon-default-phone" class="form-control phone-mask"
-                                        name="montant" value="{{ $op->montant }}"
-                                        aria-describedby="basic-icon-default-phone2" />
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">Regellement</label>
+                            <label class="col-sm-2 col-form-label" for="numero">libelle</label>
                             <div class="col-sm-10">
-                                <select class="form-select" id="exampleFormControlSelect1" name="regellement"
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control" id="libelle" value="{{ $ocbg->libelle }}" name="libelle" placeholder="Enter libelle" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="numero">montant</label>
+                            <div class="col-sm-10">
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control" id="montant" value="{{ $ocbg->montant }}" name="montant" placeholder="Enter montant" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">justification</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" id="exampleFormControlSelect1" name="justification"
                                     aria-label="Default select example">
-                                    <option value="{{ $op->regellement }}">{{ $op->regellement }}</option>
-                                    <option value="non">Non</option>
-                                    <option value="oui">Oui</option>
+                                    <option value="{{ $ocbg->justification }}">{{ $ocbg->justification }}</option>
+                                    <option value="non">non</option>
+                                    <option value="oui">oui</option>
                                 </select>
                             </div>
                         </div>
@@ -100,4 +100,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
+
+

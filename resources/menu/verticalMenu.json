@@ -26,24 +26,68 @@
           "slug": "pages-misc-error"
         },
         {
-          "url": "table/paiement",
-          "name": "paiement",
-          "slug": "pages-misc-error"
-        },
-        {
-          "url": "/table/non_paiement",
-          "name": "non paiement",
-          "slug": "pages-misc-error"
+          "url": "/table/all",
+          "icon": "menu-icon tf-icons bx bx-table",
+          "name": "les Section",
+          "slug": "tableau-all",
+          "submenu": [
+            {
+              "url": "/table/Athlétisme",
+              "name": "Athlétisme",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/karaté",
+              "name": "karaté",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Gymnastique",
+              "name": "Gymnastique",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Natation",
+              "name": "Natation",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Halteroptrit",
+              "name": "Halteroptrit",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Cyclisme",
+              "name": "Cyclisme",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Petanque",
+              "name": "Petanque",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Tennis",
+              "name": "Tennis",
+              "slug": "pages-misc-error"
+            },
+            {
+              "url": "/table/Tirauvol",
+              "name": "Tir au vol",
+              "slug": "pages-misc-error"
+            }
+          ]
         }
       ]
-    },
+    }
+    ,
     {
       "name": "créer",
       "icon": "menu-icon tf-icons bx bx-list-plus",
       "slug": "créer",
       "submenu": [
         {
-          "url": "créer/nouvelle",
+          "url": "/créer/nouvelle",
           "name": "créer",
           "slug": "créer"
         }

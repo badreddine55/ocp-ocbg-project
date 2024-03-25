@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ops', function (Blueprint $table) {
+        Schema::create('ocbg', function (Blueprint $table) {
             $table->id();
-            $table->string('numero');
+            $table->string('numero_OP')->unique();
+            $table->string('section');
+            $table->date('Date_regèlement');
             $table->string('libelle');
-            $table->string('elaboration');
-            $table->string('type');
             $table->string('montant');
-            $table->string('regellement')->default('non');
-            $table->string('pdf_file_path')->nullable();
+            $table->enum('justification', ['non', 'oui'])->default('non');
+            $table->string('pdf_file_path')->nullable(); // Changed default value to nullable
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ops');
+        Schema::dropIfExists('ocbg');
     }
 };

@@ -20,11 +20,11 @@
     </style>
 
     <h4 class="py-3 mb-4">
-        <span class="text-muted fw-light">Tableau /</span> Tout
+        <span class="text-muted fw-light">Tableau /</span> Petanque
     </h4>
 
     <div class="card">
-        <h5 class="card-header">Tableau tout OCBG</h5>
+        <h5 class="card-header">Tableau Petanque OCBG</h5>
         <div class="table-responsive">
             <div class="row mb-3">
 
@@ -106,7 +106,7 @@
                 <tfoot>
                     <tr>
                         <th colspan="2">Total Operations: {{ $totalOperations }}</th>
-                        <th colspan="2">Total Montant: {{ $totalMontant }} .00DH</th>
+                        <th colspan="2">Total Montant: {{ $totalMontant }} DH</th>
                     </tr>
                 </tfoot>
             </table>

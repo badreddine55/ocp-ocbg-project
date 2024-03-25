@@ -1,22 +1,21 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ops extends Model
+class ocbg extends Model
 {
     use HasFactory;
 
-    protected $table = "ops";
+    protected $table = "ocbg";
     protected $fillable = [
-        'numero',
+        'numero_OP',
+        'section',
+        'date_reglement',
         'libelle',
-        'elaboration',
-        'type',
         'montant',
-        'regellement',
+        'justification',
         'pdf_file_path'
     ];
 }

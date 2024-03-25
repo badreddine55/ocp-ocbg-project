@@ -6,7 +6,8 @@
             <span class="app-brand-logo demo">
                 <img src=" {{ asset('assets/img/favicon/OCP_Group.svg.png') }}" width="35px" alt="">
             </span>
-            <span class="app-brand-text demo menu-text fw-bold ms-2">{{config('variables.Name')}}</span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2">{{ ucfirst(config('variables.Name')) }}</span>
+
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
