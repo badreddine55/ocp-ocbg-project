@@ -16,16 +16,12 @@ class ExcelController extends Controller
         return view("Excel.import");
     }
 
+
     public function import(Request $request)
     {
         // Validate the uploaded file
         $request->validate([
-            'numero_OP' => ['string'],
-            'section' => ['string'],
-            'Date_regèlement' => ['date', 'date_format:Y-m-d'],
-            'libelle' => ['string'],
-            'montant' => ['required', 'numeric'], 
-            'justification' => Rule::in(['non', 'oui']),
+            'file' => 'required|file|mimes:xlsx,xls',
         ]);
     
         // Check if the validation passes

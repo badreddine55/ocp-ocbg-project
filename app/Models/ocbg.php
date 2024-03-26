@@ -12,7 +12,7 @@ class ocbg extends Model
     protected $fillable = [
         'numero_OP',
         'section',
-        'date_reglement',
+        'Date_regèlement',
         'libelle',
         'montant',
         'justification',
