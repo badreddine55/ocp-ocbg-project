@@ -117,7 +117,7 @@ class GestionOCBGController extends Controller
     
             return redirect()->route("table-all")->with('success', 'OCBG created successfully.');
         } catch (\Exception $e) {
-            $error = 'An error occurred while creating OCBG.';
+            $error = 'the error in the NUMÉRO OP is unique';
             return view('content.form-layout.form-create')->with('error', $error);
         }
     }

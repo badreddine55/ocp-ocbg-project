@@ -20,7 +20,7 @@
     </style>
 
     <h4 class="py-3 mb-4">
-        <span class="text-muted fw-light">Tableau /</span> Halteroptrit
+        <span class="text-muted fw-light">Tableau /</span> Haltérophitie
     </h4>
 
     <div class="card">
